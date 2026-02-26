@@ -50,7 +50,7 @@ app.use(
         }),
         cookie: {
             secure: false,
-            
+
             expires: new Date(Date.now() + (1000 * 60 * 60 * 5)),
             httpOnly: true
         }
@@ -81,12 +81,13 @@ app.use('/toughts', toughtsRoutes)
 app.use('/', authRoutes)
 app.get('/', ToughtsController.showToughts)
 
+const PORT = process.env.PORT || 3000
+
 conn
-  .sync()
-  .then(() => {
-    const PORT = process.env.PORT || 3000
-    app.listen(PORT, () => {
-      console.log(`Servidor rodando na porta ${PORT}`)
+    .sync()
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(`Servidor rodando na porta ${PORT}`)
+        })
     })
-  })
-  .catch((err) => console.log(err))
+    .catch((err) => console.log(err))
