@@ -1,24 +1,20 @@
-const { Sequelize } = require('sequelize')
+const { Sequelize } = require('sequelize');
 
-let sequelize
+let sequelize;
 
+// No Railway, a variável MYSQL_URL existirá.
+// No seu PC, ela não existe, então ele cai no 'else'.
 if (process.env.MYSQL_URL) {
-  // Produção (Railway)
   sequelize = new Sequelize(process.env.MYSQL_URL, {
-    dialect: 'mysql'
-  })
+    dialect: 'mysql',
+    logging: false
+  });
 } else {
-  // Ambiente local
-  sequelize = new Sequelize(
-    process.env.DB_NAME,
-    process.env.DB_USER,
-    process.env.DB_PASSWORD,
-    {
-      host: process.env.DB_HOST,
-      dialect: 'mysql'
-    }
-  )
+  // Configuração para o seu PC (Guilherme)
+  sequelize = new Sequelize('toughts', 'root', 'developer2026', {
+    host: 'localhost',
+    dialect: 'mysql',
+  });
 }
-console.log('CONN FILE CARREGADO')
 
-module.exports = sequelize
+module.exports = sequelize;
