@@ -2,8 +2,8 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #222;
-    color: #fff;
+    background-color: #fff;
+    color: black;
 }
 
 /* NAVBAR */
@@ -16,9 +16,9 @@
     padding: 1.2em 1.4em;
     margin-bottom: 1em;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: #222;
+    background-color: #ffffff;
     border-bottom: 1px solid #f6982d;
 }
 
@@ -50,7 +50,7 @@
 /*MESSAGES*/
 .message {
     padding: 1em;
-    color: #004085;
+    color: #008512;
     background-color: #cce5ff;
     border: 1px solid #b8daff;
     border-radius: 5px;

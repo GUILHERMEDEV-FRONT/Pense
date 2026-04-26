@@ -36,10 +36,11 @@
 <div class="toughts-container">
     {{#each toughts}}
     <figure>
+         <figcaption>por :<span>{{this.User.name}}</span></figcaption>
         <blockquote>
             "{{this.title}}"
         </blockquote>
-        <figcaption>por <span>{{this.User.name}}</span></figcaption>
+       
     </figure>
     {{/each}}
 </div>
