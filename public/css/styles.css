@@ -1,8 +1,9 @@
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: transparent;
     color: black;
 }
 
@@ -75,7 +76,7 @@
 
 .auth-container h2 {
     margin-bottom: 1em;
-    color: #fff;
+    color: #000000;
     border-left: 4px solid #f6982d;
     padding: .3em;
     width: 100px;
@@ -131,6 +132,7 @@ form input[type="submit"]:hover,
 
 .tought-form-container a {
     color: #f6982d;
+    
 }
 
 .tought-form-container a:hover {
@@ -139,9 +141,10 @@ form input[type="submit"]:hover,
 
 .tought-form-container h1 {
     margin-bottom: 1em;
-    color: #fff;
+    color: #000000;
     border-left: 4px solid #f6982d;
     padding: .3em;
+    
 }
 
 .tought-form-container form {
@@ -188,7 +191,7 @@ form input[type="submit"]:hover,
 }
 
 .dashboard .actions .btn {
-    color: #fff;
+    color: #000000;
     border-color: #fff;
     margin: 0 0.5em
 }
@@ -222,7 +225,8 @@ form input[type="submit"]:hover,
 
 .home-header input {
     border: none;
-    border-bottom: 1px solid #fff;
+    border: 1px solid #0e0c0c;
+    border-radius: 3px;
     padding: 0.5em;
     margin-right: 1em;
 }
@@ -232,7 +236,7 @@ form input[type="submit"]:hover,
 }
 
 .home-header input::placeholder{
-    color: #fff;
+    color: #1f1616;
 }
 
 .order-container {
@@ -245,7 +249,7 @@ form input[type="submit"]:hover,
 
 .order-container span {
     font-weight: bold;
-    color: #fff;
+    color: #080000;
 }
 
 .order-container form {
@@ -271,10 +275,18 @@ form input[type="submit"]:hover,
     margin: 0 10px;
 }
 
+.toughts-container figure, .toughts-container figcaption,
+ .toughts-container blockquote, .toughts-container span {
+    transition: 0.5s;
+    background-color: antiquewhite;
+}
+
 
 .toughts-container figure {
-    border-bottom: 1px solid #333;
-    padding: 0.5em;
+    background-color: antiquewhite;
+    border: 1px solid #333;
+    border-radius: 7px;
+    padding: 2em;
     max-width: 50%;
     margin: 0 auto 1em;
 }
@@ -283,10 +295,12 @@ form input[type="submit"]:hover,
     font-style: italic;
     font-size: 2em;
     margin-bottom: 0.4em;
+    background-color: antiquewhite;
 }
 
 .toughts-container span {
     color: #f6982d;
+    background-color: antiquewhite;
 }
 
 /* FOOTER */

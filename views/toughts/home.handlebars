@@ -1,7 +1,7 @@
 <div class="home-header">
 
     {{#if search}}
-    <h1>Você está buscando <por:span>{{search}}</por:span></h1>
+    <h1>Você está buscando por algo? <span>{{search}}</span></h1>
     {{#if toughtsQty}}
       <p>Foram encontrados <span>{{toughtsQty}}</span> Pensamentos</p>
     {{else}}
@@ -9,7 +9,7 @@
     {{/if}}
 
     {{else}}
-    <h1>Conheça alguns dos nossos <span>Pensamentos</span>:</h1>
+    <h1>Conheça alguns dos nossos <span>Pensamentos</span></h1>
 
     {{/if}}
 
@@ -18,7 +18,7 @@
         <input type="submit" class="btn" value="Buscar">
     </form>
     <div class="order-container">
-        <span>Ordenar por: </span>
+        <span>Ordenar por </span>
         <form action="/" method="get">
             <input type="hidden" name="search" value="{{this.search}}">
             <input type="hidden" name="order" value="new">
@@ -36,9 +36,9 @@
 <div class="toughts-container">
     {{#each toughts}}
     <figure>
-         <figcaption>por :<span>{{this.User.name}}</span></figcaption>
+         <figcaption><span>{{this.User.name}}</span></figcaption>
         <blockquote>
-            "{{this.title}}"
+            {{this.title}}
         </blockquote>
        
     </figure>
